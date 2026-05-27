@@ -1,0 +1,27 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 350px;">
+    <h2 style="text-align: center; color: #59573E; margin-bottom: 5px;">docuFacil</h2>
+    <p style="text-align: center; color: #8C8177; margin-bottom: 20px; font-size: 14px;">Control Documental Seguro</p>
+    
+    <div *ngIf="errorMessage" style="background: #FDF2F2; color: #B00020; padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 12px; border-left: 4px solid #B00020;">
+      ⚠ {{ errorMessage }}
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label style="font-weight: 600; font-size: 14px; display: block; margin-bottom: 5px;">Correo electrónico</label>
+      <input type="email" [(ngModel)]="email" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" placeholder="admin@docufacil.com">
+    </div>
+    
+    <div style="margin-bottom: 20px;">
+      <label style="font-weight: 600; font-size: 14px; display: block; margin-bottom: 5px;">Contraseña</label>
+      <input type="password" [(ngModel)]="password" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" placeholder="••••••••">
+    </div>
+    
+    <button class="btn-controldocs" (click)="entrar()">Iniciar Sesión</button>
+    
+    <p style="margin-top: 20px; font-size: 13px; text-align: center; color: #333;">
+      ¿Tu organización no está registrada? <br>
+      <a (click)="irARegistro()" style="color: #8C8177; cursor: pointer; text-decoration: underline; font-weight: 600;">Regístrala aquí</a>
+    </p>
+  </div>
+</div>

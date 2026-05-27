@@ -1,0 +1,35 @@
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <div style="background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 400px;">
+    
+    <h2 style="color: #59573E; margin-bottom: 5px; margin-top: 0; font-family: 'Montserrat', sans-serif;">Registrar Organización</h2>
+    <p style="color: #8C8177; margin-bottom: 25px; font-size: 14px;">Ecosistema docuFacil</p>
+    
+    <div *ngIf="errorMessage" style="background: #FDF2F2; color: #B00020; padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 12px; border-left: 4px solid #B00020;">
+      ⚠ {{ errorMessage }}
+    </div>
+
+    <div *ngIf="successMessage" style="background: #E6F4EA; color: #137333; padding: 10px; border-radius: 4px; margin-bottom: 15px; font-size: 12px; border-left: 4px solid #137333;">
+      ✓ {{ successMessage }}
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <label style="font-weight: 600; font-size: 14px; display: block; margin-bottom: 5px;">NIT de la Empresa</label>
+      <input type="text" [(ngModel)]="nit" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" placeholder="Ej: 900123456-1">
+    </div>
+    
+    <div style="margin-bottom: 25px;">
+      <label style="font-weight: 600; font-size: 14px; display: block; margin-bottom: 5px;">Nombre de la Organización</label>
+      <input type="text" [(ngModel)]="nombre" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;" placeholder="Ej: Industrias del Café S.A.">
+    </div>
+    
+    <div style="display: flex; gap: 10px;">
+      <button type="button" (click)="cancelar()" style="background: transparent; color: #8C8177; border: 1px solid #8C8177; padding: 12px; border-radius: 4px; cursor: pointer; font-weight: bold; flex: 1;">
+        Cancelar
+      </button>
+      <button type="button" class="btn-controldocs" (click)="finalizarRegistro()" style="flex: 1;">
+        Registrar
+      </button>
+    </div>
+
+  </div>
+</div>

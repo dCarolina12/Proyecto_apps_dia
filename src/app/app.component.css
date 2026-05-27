@@ -1,0 +1,85 @@
+.dashboard-container {
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.controldocs-card {
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 24px;
+  border: 1px solid rgba(140, 129, 119, 0.2);
+  overflow: hidden;
+}
+
+.card-title-bar {
+  background-color: var(--color-primario);
+  color: #FFFFFF;
+  padding: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th {
+  background-color: var(--color-secundario);
+  color: #FFFFFF;
+  padding: 12px 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.custom-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #EAEAEA;
+  font-size: 13.5px;
+}
+
+.btn-controldocs {
+  background-color: var(--color-primario);
+  color: #FFFFFF;
+  border: none;
+  padding: 0 16px;
+  height: 40px; 
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-controldocs:hover {
+  background-color: #403E2D; 
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+
+.badge-estado {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.estado-creado {
+  background-color: #E2E2E2;
+  color: #444444;
+}
+
+.estado-revision {
+  background-color: var(--color-advertencia);
+  color: #0D0D0D;
+}
+
+.estado-aprobado {
+  background-color: var(--color-exito); 
+  color: #FFFFFF;
+}
